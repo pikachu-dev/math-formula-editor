@@ -1,3 +1,5 @@
+// Keep the dark default even if an old or unsupported preference was stored.
+if(document.documentElement.dataset.theme!=='light')document.documentElement.dataset.theme='dark';
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const definitions=[
